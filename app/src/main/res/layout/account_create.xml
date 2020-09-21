@@ -1,6 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ride_share">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:layout_gravity="center"
+        android:fontFamily="cursive"
+        android:text="@string/rideshare"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/sign_up"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/traveler"
+            android:layout_width="0dp"
+            android:layout_weight="49.5"
+            android:layout_height="wrap_content"
+            android:background="#3E0716"
+            android:fontFamily="@font/roboto_medium"
+            android:text="TRAVELER"
+            android:onClick="traveler"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/rider"
+            android:layout_width="0dp"
+            android:layout_weight="49.5"
+            android:layout_height="wrap_content"
+            android:background="#3E0716"
+            android:fontFamily="@font/roboto_medium"
+            android:text="RIDER"
+            android:onClick="rider"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="58"
+        android:id="@+id/frame1">
+    </FrameLayout>
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"
+        android:background="#3E0716"
+        android:fontFamily="@font/roboto_medium"
+        android:text="SIGN UP"
+        android:textColor="@color/white" />
+    <Space
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,10 +1,11 @@
-package com.ikigai.rideshare
+package com.ikigai.rideshare.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.ikigai.rideshare.R
 
 class CreateAccount : AppCompatActivity(){
     lateinit var fmanager: FragmentManager

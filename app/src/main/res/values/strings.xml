@@ -8,5 +8,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="phone_number">Phone Number</string>
+    <string name="vehicle_type">Type of Vehicle</string>
     <string name="rideshare">RideShare</string>
+    <string name="sign_up">SIGN UP</string>
 </resources>

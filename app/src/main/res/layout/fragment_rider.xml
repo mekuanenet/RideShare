@@ -1,83 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TravelerFragment"
-    android:background="@drawable/create_acc">
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="105dp"
-        android:fontFamily="cursive"
-        android:text="@string/rideshare"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="236dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="173dp"
-        android:layout_marginEnd="-1dp"
-        android:background="@drawable/black_alpha_50"
-        android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/black_alpha_50"
+    tools:context=".ui.TravelerFragment">
 
         <EditText
             android:id="@+id/fname"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="16"
             android:backgroundTint="@android:color/holo_red_light"
             android:fontFamily="@font/roboto"
             android:hint="@string/first_name"
-            android:inputType="textEmailAddress"
+            android:inputType="textPersonName"
             android:textColorHint="@color/white" />
 
         <EditText
             android:id="@+id/lname"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="16"
             android:backgroundTint="@android:color/holo_red_light"
             android:fontFamily="@font/roboto"
             android:hint="@string/last_name"
-            android:inputType="textPassword"
+            android:inputType="textPersonName"
             android:textColorHint="@color/white" />
 
         <EditText
             android:id="@+id/pnumber"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="16"
             android:backgroundTint="@android:color/holo_red_light"
             android:fontFamily="@font/roboto"
             android:hint="@string/phone_number"
-            android:inputType="textPassword"
+            android:inputType="phone"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/vehicle_type"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="16"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/vehicle_type"
+            android:inputType="phone"
             android:textColorHint="@color/white" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="16"
             android:backgroundTint="@android:color/holo_red_light"
             android:fontFamily="@font/roboto"
             android:hint="@string/email"
-            android:inputType="textPassword"
+            android:inputType="textEmailAddress"
             android:textColorHint="@color/white" />
 
         <EditText
             android:id="@+id/pword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="16"
             android:backgroundTint="@android:color/holo_red_light"
             android:fontFamily="@font/roboto"
             android:hint="@string/password"
@@ -85,22 +74,3 @@
             android:textColorHint="@color/white" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/signIn"
-        android:layout_width="249dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginEnd="83dp"
-        android:layout_marginBottom="171dp"
-        android:background="#3E0716"
-        android:fontFamily="@font/roboto_medium"
-        android:padding="12dp"
-        android:text="CREATE ACCOUNT"
-        android:textColor="@color/white" />
-
-
-</RelativeLayout>
