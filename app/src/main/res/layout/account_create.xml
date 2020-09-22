@@ -75,6 +75,7 @@
     <Button
         android:id="@+id/signup"
         android:layout_width="match_parent"
+        android:onClick="saveUser"
         android:layout_weight="10"
         android:layout_height="0dp"
         android:background="#3E0716"

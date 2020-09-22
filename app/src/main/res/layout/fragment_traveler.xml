@@ -15,7 +15,8 @@
         android:backgroundTint="@android:color/holo_red_light"
         android:fontFamily="@font/roboto"
         android:hint="@string/first_name"
-        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:inputType="textPersonName"
         android:textColorHint="@color/white" />
 
     <EditText
@@ -26,7 +27,8 @@
         android:backgroundTint="@android:color/holo_red_light"
         android:fontFamily="@font/roboto"
         android:hint="@string/last_name"
-        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:inputType="textPersonName"
         android:textColorHint="@color/white" />
 
     <EditText
@@ -37,7 +39,8 @@
         android:backgroundTint="@android:color/holo_red_light"
         android:fontFamily="@font/roboto"
         android:hint="@string/phone_number"
-        android:inputType="textPassword"
+        android:inputType="phone"
+        android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
     <EditText
@@ -48,7 +51,8 @@
         android:backgroundTint="@android:color/holo_red_light"
         android:fontFamily="@font/roboto"
         android:hint="@string/email"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
     <EditText
@@ -56,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
+        android:textColor="@color/white"
         android:backgroundTint="@android:color/holo_red_light"
         android:fontFamily="@font/roboto"
         android:hint="@string/password"
