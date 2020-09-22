@@ -16,7 +16,8 @@
             android:fontFamily="@font/roboto"
             android:hint="@string/first_name"
             android:inputType="textPersonName"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
 
         <EditText
             android:id="@+id/lname"
@@ -27,7 +28,8 @@
             android:fontFamily="@font/roboto"
             android:hint="@string/last_name"
             android:inputType="textPersonName"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
 
         <EditText
             android:id="@+id/pnumber"
@@ -38,7 +40,8 @@
             android:fontFamily="@font/roboto"
             android:hint="@string/phone_number"
             android:inputType="phone"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
 
         <EditText
             android:id="@+id/vehicle_type"
@@ -48,8 +51,9 @@
             android:backgroundTint="@android:color/holo_red_light"
             android:fontFamily="@font/roboto"
             android:hint="@string/vehicle_type"
-            android:inputType="phone"
-            android:textColorHint="@color/white" />
+            android:inputType="textPersonName"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
 
         <EditText
             android:id="@+id/email"
@@ -60,7 +64,8 @@
             android:fontFamily="@font/roboto"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
 
         <EditText
             android:id="@+id/pword"
@@ -71,6 +76,7 @@
             android:fontFamily="@font/roboto"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
