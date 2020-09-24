@@ -1,4 +1,4 @@
-package com.ikigai.rideshare.db
+package com.ikigai.rideshare.db.trip
 
 import android.content.Context
 import androidx.room.Database
