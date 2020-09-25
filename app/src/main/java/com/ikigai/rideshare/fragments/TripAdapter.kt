@@ -1,11 +1,15 @@
-package com.ikigai.rideshare.db.trip
+package com.ikigai.rideshare.fragments
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.ListFragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.ikigai.rideshare.R
+import com.ikigai.rideshare.db.trip.Trip
 import kotlinx.android.synthetic.main.custom_row.view.*
+import kotlinx.android.synthetic.main.fragment_view.view.*
 
 class TripAdapter : RecyclerView.Adapter<TripAdapter.MyViewHolder>() {
 
@@ -23,10 +27,16 @@ class TripAdapter : RecyclerView.Adapter<TripAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = tripList[position]
-        holder.itemView.id_txt.text = currentItem.id.toString()
         holder.itemView.departure_txt.text = currentItem.departure
         holder.itemView.destination_txt.text = currentItem.destination
         holder.itemView.date_txt.text = currentItem.date
+        holder.itemView.time_txt.text = currentItem.time
+        holder.itemView.message_txt.text = currentItem.message
+
+        holder.itemView.row_layout.setOnClickListener {
+            val action = ViewTripFragmentDirections.actionViewTripFragmentToViewFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     fun setData(trip: List<Trip>){

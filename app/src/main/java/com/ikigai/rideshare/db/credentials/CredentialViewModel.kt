@@ -1,4 +1,4 @@
-package com.ikigai.rideshare.db.trip
+package com.ikigai.rideshare.db.credentials
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -7,38 +7,38 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class TripViewModel(application: Application): AndroidViewModel(application) {
+class CredentialViewModel(application: Application): AndroidViewModel(application) {
 
-    val readAllData: LiveData<List<Trip>>
-    private val repository: TripRepository
+    val readAllData: LiveData<List<Credent>>
+    private val repository: CredentialRepository
 
     init {
-        val tripDAO = TripDatabase.getDatabase(application).tripDao()
-        repository = TripRepository(tripDAO)
+        val credentialDao = CredentialDatabase.getDatabase(application).credentialDao()
+        repository = CredentialRepository(credentialDao)
         readAllData = repository.readAllData
     }
 
-    fun addTrip(trip: Trip) {
+    fun addCredential(credent: Credent) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.addTrip(trip)
+            repository.addCredential(credent)
         }
     }
 
-    fun updateTrip(trip: Trip){
+    fun updateCredential(credent: Credent){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.updateTrip(trip)
+            repository.updateCredential(credent)
         }
     }
 
-    fun deleteTrip(trip: Trip){
+    fun deleteCredential(credent: Credent){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteTrip(trip)
+            repository.deleteCredential(credent)
         }
     }
 
-    fun deleteAllTrips(){
+    fun deleteAllCredential(){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteAllTrips()
+            repository.deleteAllCredential()
         }
     }
 }

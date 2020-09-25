@@ -1,4 +1,4 @@
-package com.ikigai.rideshare.db.trip
+package com.ikigai.rideshare.db.user
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -7,20 +7,21 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class TripViewModel(application: Application): AndroidViewModel(application) {
+class UserViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Trip>>
-    private val repository: TripRepository
+    val readAllData: LiveData<List<User>>
+    private val repository: UserRepository
 
     init {
-        val tripDAO = TripDatabase.getDatabase(application).tripDao()
-        repository = TripRepository(tripDAO)
+        val userDao = UserDatabase.getDatabase(application).userDao()
+        repository = UserRepository(userDao)
         readAllData = repository.readAllData
     }
 
-    fun addTrip(trip: Trip) {
+    fun addUser(user: User){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.addTrip(trip)
+            repository.addUser(user)
         }
     }
+
 }

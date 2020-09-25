@@ -1,24 +1,24 @@
-package com.ikigai.rideshare.db.trip
+package com.ikigai.rideshare.db.credentials
 
 import androidx.lifecycle.LiveData
 
-class TripRepository(private val tripDAO: TripDAO) {
+class CredentialRepository(private val credentialDao: CredentialDao) {
 
-    val readAllData: LiveData<List<Trip>> = tripDAO.readAllData()
+    val readAllData: LiveData<List<Credent>> = credentialDao.readAllData()
 
-    suspend fun addTrip(trip: Trip) {
-        tripDAO.addTrip(trip)
+    suspend fun addCredential(credent: Credent) {
+        credentialDao.addCredential(credent)
     }
 
-    suspend fun updateTrip(trip: Trip){
-        tripDAO.updateTrip(trip)
+    suspend fun updateCredential(credent: Credent){
+        credentialDao.updateCredential(credent)
     }
 
-    suspend fun deleteTrip(trip: Trip){
-        tripDAO.deleteTrip(trip)
+    suspend fun deleteCredential(credent: Credent){
+        credentialDao.deleteCredential(credent)
     }
 
-    suspend fun deleteAllTrips(){
-        tripDAO.deleteAllTrips()
+    suspend fun deleteAllCredential(){
+        credentialDao.deleteAllCredentials()
     }
 }

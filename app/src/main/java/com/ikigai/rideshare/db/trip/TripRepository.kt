@@ -1,4 +1,4 @@
-package com.ikigai.rideshare.db
+package com.ikigai.rideshare.db.trip
 
 import androidx.lifecycle.LiveData
 
@@ -8,5 +8,17 @@ class TripRepository(private val tripDAO: TripDAO) {
 
     suspend fun addTrip(trip: Trip) {
         tripDAO.addTrip(trip)
+    }
+
+    suspend fun updateTrip(trip: Trip){
+        tripDAO.updateTrip(trip)
+    }
+
+    suspend fun deleteTrip(trip: Trip){
+        tripDAO.deleteTrip(trip)
+    }
+
+    suspend fun deleteAllTrips(){
+        tripDAO.deleteAllTrips()
     }
 }

@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/nav_call"
+        android:title="Call"
+        android:icon="@drawable/pngfuel"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/nav_text"
+        android:title="Text"
+        android:icon="@drawable/pngbarn"
+        android:iconTint="@color/followingBg"
+        app:showAsAction="ifRoom"
+        />
+
+    <item android:id="@+id/nav_email"
+        android:title="Email"
+        android:icon="@drawable/iconfinder_gmail_1220340"
+        android:iconTint="@color/followingBg"
+        app:showAsAction="ifRoom"/>
 
 </menu>

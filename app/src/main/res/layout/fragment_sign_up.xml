@@ -1,14 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpFragment">
+    android:orientation="vertical"
+    tools:context=".fragments.SignUpFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Space
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:layout_height="wrap_content" />
 
-</FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:background="@drawable/black_alpha_50"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/fname"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/first_name"
+            android:textColor="@color/white"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/lname"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/pnumber"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/pword"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#3E0716"
+        android:fontFamily="@font/roboto_medium"
+        android:text="SIGN UP"
+        android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

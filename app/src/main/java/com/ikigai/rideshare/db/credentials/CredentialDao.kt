@@ -1,23 +1,23 @@
-package com.ikigai.rideshare.db.trip
+package com.ikigai.rideshare.db.credentials
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
-interface TripDAO {
+interface CredentialDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun addTrip(trip: Trip)
+    suspend fun addCredential(credent: Credent)
 
-    @Query("SELECT * FROM trip_table ORDER BY id ASC")
-    fun readAllData(): LiveData<List<Trip>>
+    @Query("SELECT * FROM credential_table ORDER BY id ASC")
+    fun readAllData(): LiveData<List<Credent>>
 
     @Update
-    suspend fun updateTrip(trip: Trip)
+    suspend fun updateCredential(credent: Credent)
 
     @Delete
-    suspend fun deleteTrip(trip: Trip)
+    suspend fun deleteCredential(credent: Credent)
 
-    @Query("DELETE FROM trip_table")
-    suspend fun deleteAllTrips()
+    @Query("DELETE FROM credential_table")
+    suspend fun deleteAllCredentials()
 }

@@ -1,20 +1,20 @@
-package com.ikigai.rideshare.db.trip
+package com.ikigai.rideshare.db.user
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Trip::class], version = 1, exportSchema = false)
-abstract class TripDatabase : RoomDatabase(){
+@Database(entities = [User::class], version = 1, exportSchema = false)
+abstract class UserDatabase : RoomDatabase() {
 
-    abstract fun tripDao(): TripDAO
+    abstract fun userDao(): UserDao
 
     companion object {
         @Volatile
-        private var INSTANCE: TripDatabase? = null
+        private var INSTANCE: UserDatabase? = null
 
-        fun getDatabase(context: Context) : TripDatabase {
+        fun getDatabase(context: Context): UserDatabase{
             val tempInstance = INSTANCE
             if(tempInstance != null){
                 return tempInstance
@@ -22,12 +22,13 @@ abstract class TripDatabase : RoomDatabase(){
             synchronized(this){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    TripDatabase::class.java,
-                    "trip_database"
+                    UserDatabase::class.java,
+                    "user_database"
                 ).build()
                 INSTANCE = instance
                 return instance
             }
         }
     }
+
 }

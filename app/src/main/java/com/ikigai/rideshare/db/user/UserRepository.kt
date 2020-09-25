@@ -1,12 +1,13 @@
-package com.ikigai.rideshare.db.trip
+package com.ikigai.rideshare.db.user
 
 import androidx.lifecycle.LiveData
 
-class TripRepository(private val tripDAO: TripDAO) {
+class UserRepository(private val userDao: UserDao) {
 
-    val readAllData: LiveData<List<Trip>> = tripDAO.readAllData()
+    val readAllData: LiveData<List<User>> = userDao.readAllData()
 
-    suspend fun addTrip(trip: Trip) {
-        tripDAO.addTrip(trip)
+    suspend fun addUser(user: User){
+        userDao.addUser(user)
     }
+
 }
